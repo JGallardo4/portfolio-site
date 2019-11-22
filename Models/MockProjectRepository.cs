@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Portfolio.Models
 {
-	public class MockProjectRepository: IProjectRepository
+	public class MockProjectRepository : IProjectRepository
 	{
 		public IEnumerable<Project> AllProjects =>
 			new List<Project>
