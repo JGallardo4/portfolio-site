@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/juan/Code/web-projects/portfolio-site/portfolio-site.csproj",
-      "projectName": "portfolio-site",
-      "projectPath": "/home/juan/Code/web-projects/portfolio-site/portfolio-site.csproj",
+      "projectUniqueName": "/home/juan/Code/web-projects/portfolio-site/portfolio.csproj",
+      "projectName": "portfolio",
+      "projectPath": "/home/juan/Code/web-projects/portfolio-site/portfolio.csproj",
       "packagesPath": "/home/juan/.nuget/packages/",
       "outputPath": "/home/juan/Code/web-projects/portfolio-site/obj/",
       "projectStyle": "PackageReference",
