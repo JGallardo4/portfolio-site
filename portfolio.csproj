@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    <!--<RuntimeIdentifier>linux-x64</RuntimeIdentifier>-->
     <RootNamespace>Portfolio</RootNamespace>
   </PropertyGroup>
 

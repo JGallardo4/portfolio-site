@@ -15,20 +15,13 @@ namespace Portfolio.Controllers
 			_projectRepository = projectRepository;
 		}
 
-		public ViewResult AllProjects()
+		public ViewResult Index()
 		{
+            Console.WriteLine("In action method");
 			ProjectsListViewModel projectsListViewModel = new ProjectsListViewModel();
-			projectsListViewModel.Projects = _projectRepository.AllProjects;
-			
-			return View(projectsListViewModel);
-		}
+			projectsListViewModel.Projects = _projectRepository.GetAll;
 
-		public ViewResult AllWithTags()
-		{	
-			ProjectsListViewModel projectsListViewModel = new ProjectsListViewModel();
-			projectsListViewModel.Projects = _projectRepository.AllWithTags;
-
-			return View(projectsListViewModel);
+            return View(projectsListViewModel);
 		}
 	}
 }

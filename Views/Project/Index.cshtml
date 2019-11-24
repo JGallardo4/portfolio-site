@@ -1,0 +1,33 @@
+﻿@model ProjectsListViewModel
+
+
+<h1>Projects</h1>
+
+<h3>Featured Projects</h3>
+<ul id="projects-featured">
+	@foreach (var project in Model.Projects.Where(p => p.Featured))
+	{
+	<li><div class="project-card">
+		<h2>@project.Name</h2>
+		<h3>@project.Description</h3>
+		<hr>
+		<h4>@project.GithubUrl</h4>
+		<h4>@project.LiveUrl</h4>
+	</div></li>
+	}
+</ul>
+
+
+<h3>Other Projects</h3>
+<ul id="projects-others">
+	@foreach (var project in Model.Projects.Where(p => !p.Featured))
+	{
+	<li><div class="project-card">
+		<h2>@project.Name</h2>
+		<h3>@project.Description</h3>
+		<hr>
+		<h4>@project.GithubUrl</h4>
+		<h4>@project.LiveUrl</h4>
+	</div></li>
+	}
+</ul>
