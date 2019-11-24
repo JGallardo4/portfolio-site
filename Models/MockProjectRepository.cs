@@ -15,7 +15,7 @@ namespace Portfolio.Models
 					GithubUrl = "https://github.com/Juan-G-04/portfolio-site",
 					Featured = true,
 					ImageUrl = "https://insektenliebe.com/wp-content/uploads/2019/01/IMG_8316.jpg",
-					Tags = "csharp, asp.net core mvc, html, css, js",
+					Tags = new List<string>{"csharp", "asp.net core mvc", "html", "css", "js"},
 					LiveUrl = "www.jgallardo.dev"
 				},
 				new Project {
@@ -24,7 +24,7 @@ namespace Portfolio.Models
 					Description = "Don't spend money give and get stuff for free. A community classifieds website.",
 					GithubUrl = "https://github.com/Juan-G-04/sharenet-aspnet",
 					LiveUrl = "www.sharenet.col",
-					Tags = "csharp, mvc, asp.net, .net core 3.0, html, css, js",
+					Tags = new List<string>{"csharp", "mvc", "asp.net", ".net core 3.0", "html", "css", "js"},
 					Featured = true
 				},
 				new Project {
@@ -33,7 +33,7 @@ namespace Portfolio.Models
 					Description = "A javascript browser game where you play as a terrastrial isopod.",
 					GithubUrl = "not found",
 					LiveUrl = "www.isogame.com",
-					Tags = "game, javascript, html5",
+					Tags = new List<string>{"game", "javascript", "html5"},
 					Featured = false
 				}
 			};
@@ -44,6 +44,16 @@ namespace Portfolio.Models
 		}
 
 		public IEnumerable<Project> AllFeatured => 
-			AllProjects.Where(p => p.Featured == true);
+			AllProjects.Where(p => p.Featured);
+
+		public IEnumerable<Project> AllOthers =>
+			AllProjects.Where(p => !p.Featured);
+
+		public IEnumerable<Project> AllWithTags(IEnumerable<string> tagsSelected) =>
+			// For each project return all where each selected tag is contained
+			AllProjects.Where(p => 
+					tagsSelected.All(tag =>
+						p.Tags.Contains(tag)));
+
 	}
 }

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Cousine&display=swap');
+
+* {
+	font-family: 'Cousine', monospace;
+	border-sizing: border-box;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 
+		minmax(min-content, max-content)
+		1fr
+		1fr;
+}
+
+#projects-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#navbar__links li {
+	color: #4A6766;
+	text-transform: uppercase;
+	background: #4A6766;
+}
+
+#navbar__links li:nth-child(even) {
+	background: #3B383B;
+}

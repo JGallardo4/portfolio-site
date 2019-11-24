@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Portfolio.Models
 {
@@ -9,7 +11,7 @@ namespace Portfolio.Models
 		public string Description { get; set; }
 		public string GithubUrl { get; set; }
 		public string LiveUrl { get; set; }
-		public string Tags { get; set; }
+		public IEnumerable<string> Tags { get; set; }
 		public bool Featured { get; set; }
 		public int ProjectId { get; set; }
 	}
