@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using Portfolio.Models;
+using Portfolio.Repositories;
 
 namespace Portfolio
 {

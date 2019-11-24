@@ -22,12 +22,14 @@
 <ul id="projects-others">
 	@foreach (var project in Model.Projects.Where(p => !p.Featured))
 	{
-	<li><div class="project-card">
-		<h2>@project.Name</h2>
-		<h3>@project.Description</h3>
-		<hr>
-		<h4>@project.GithubUrl</h4>
-		<h4>@project.LiveUrl</h4>
-	</div></li>
+	<li>
+        <div class="project-card">
+		    <h2>@project.Name</h2>
+		    <h3>@project.Description</h3>
+		    <hr>
+		    <h4>@project.GithubUrl</h4>
+		    <h4>@project.LiveUrl</h4>
+	    </div>
+    </li>
 	}
 </ul>

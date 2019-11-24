@@ -1,11 +1,14 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-using Portfolio.Models;
+using Portfolio.Repositories;
 using Portfolio.ViewModels;
 
 namespace Portfolio.Controllers
 {
+    /// <summary>
+    /// REVIEW: Add a description of the class.
+    /// </summary>
 	public class ProjectController : Controller
 	{
 		private readonly IProjectRepository _projectRepository;
@@ -15,11 +18,16 @@ namespace Portfolio.Controllers
 			_projectRepository = projectRepository;
 		}
 
+        /// <summary>
+        /// REVIEW: Add a description of the method.
+        /// </summary>
+        /// <returns></returns>
 		public ViewResult Index()
 		{
-            Console.WriteLine("In action method");
-			ProjectsListViewModel projectsListViewModel = new ProjectsListViewModel();
-			projectsListViewModel.Projects = _projectRepository.GetAll;
+            var projectsListViewModel = new ProjectsListViewModel
+            {
+                Projects = _projectRepository.GetAll
+            };
 
             return View(projectsListViewModel);
 		}

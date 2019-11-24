@@ -1,14 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
+using Portfolio.Models;
 
-namespace Portfolio.Models
+namespace Portfolio.Repositories
 {
+    /// <summary>
+    /// REVIEW: Add a description of the class.
+    /// </summary>
 	public class MockProjectRepository : IProjectRepository
 	{
-        private IEnumerable<Project> Projects;
+        private readonly IEnumerable<Project> Projects;
 
         public MockProjectRepository()
         {
+
+            // REVIEW: I would start by reordering the initialization variables so they're all in the same order, and
+            // at a later time, possibly moving this into a json/xml file or something similar
             Projects = new List<Project>
             {
                 new Project
@@ -19,6 +26,8 @@ namespace Portfolio.Models
                     GithubUrl = "https://github.com/Juan-G-04/portfolio-site",
                     Featured = true,
                     ImageUrl = "https://insektenliebe.com/wp-content/uploads/2019/01/IMG_8316.jpg",
+                    // REVIEW: Consider making this a list of Enums rather than strings. I started an enum class for these tags already,
+                    // you can add more tags to this file. 
                     Tags = new List<string> { "csharp", "asp.net core mvc", "html", "css", "js" },
                     LiveUrl = "www.jgallardo.dev"
                 },
@@ -52,6 +61,8 @@ namespace Portfolio.Models
 			return Projects.FirstOrDefault(p => p.ProjectId == projectId);
 		}
 
+        // REVIEW: As mentioned, you probably don't need these two methods. If you decide to remove them, make sure
+        // to remove them from the interface as well or you'll get compiler errors.
 		public IEnumerable<Project> Featured =>
             Projects.Where(p => p.Featured);
 
