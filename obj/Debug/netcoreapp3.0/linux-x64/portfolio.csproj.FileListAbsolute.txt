@@ -1,0 +1,8 @@
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/portfolio.csprojAssemblyReference.cache
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/staticwebassets/portfolio.StaticWebAssets.Manifest.cache
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/staticwebassets/portfolio.StaticWebAssets.xml
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/portfolio.MvcApplicationPartsAssemblyInfo.cache
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/portfolio.RazorAssemblyInfo.cache
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/portfolio.RazorAssemblyInfo.cs
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/portfolio.AssemblyInfoInputs.cache
+/Users/michaelkmicik/git/DotNet/portfolio-site/obj/Debug/netcoreapp3.0/linux-x64/portfolio.AssemblyInfo.cs
