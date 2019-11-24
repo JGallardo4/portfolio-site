@@ -5,7 +5,7 @@ namespace Portfolio.Models
 {
 	public class MockProjectRepository : IProjectRepository
 	{
-		public IEnumerable<Project> AllProjects =>
+		public IEnumerable<Project> All =>
 			new List<Project>
 			{
 				new Project {
@@ -43,13 +43,13 @@ namespace Portfolio.Models
 			return AllProjects.FirstOrDefault(p => p.ProjectId == projectId);
 		}
 
-		public IEnumerable<Project> AllFeatured => 
+		public IEnumerable<Project> Featured => 
 			AllProjects.Where(p => p.Featured);
 
-		public IEnumerable<Project> AllOthers =>
+		public IEnumerable<Project> Others =>
 			AllProjects.Where(p => !p.Featured);
 
-		public IEnumerable<Project> AllWithTags(IEnumerable<string> tagsSelected) =>
+		public IEnumerable<Project> WithTags(IEnumerable<string> tagsSelected) =>
 			// For each project return all where each selected tag is contained
 			AllProjects.Where(p => 
 					tagsSelected.All(tag =>

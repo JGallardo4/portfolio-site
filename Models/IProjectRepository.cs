@@ -5,10 +5,10 @@ namespace Portfolio.Models
 {
 	public interface IProjectRepository
 	{
-		IEnumerable<Project> AllProjects { get; }
-		IEnumerable<Project> AllFeatured { get; }
-		IEnumerable<Project> AllOthers { get; }
-		IEnumerable<Project> AllWithTags() { get; }
+		IEnumerable<Project> All { get; }
+		IEnumerable<Project> Featured { get; }
+		IEnumerable<Project> Others { get; }
+		IEnumerable<Project> WithTags(IEnumerable<string> tagsSelected) { get; }
 		Project GetProjectById(int projectId);
 	}
 }
