@@ -22,6 +22,15 @@ namespace Portfolio.Models
         [Display(Name = ".NET Framework")]
         DOTNET_FRAMEWORK,
 
+        [Display(Name = "CSS")]
+        CSS,
+
+        [Display(Name = "HTML")]
+        HTML,
+
+        [Display(Name = "Vanilla Javascript")]
+        JS,
+
         [Display(Name = "Python")]
         PYTHON
     }

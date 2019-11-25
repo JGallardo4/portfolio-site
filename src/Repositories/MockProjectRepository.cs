@@ -28,7 +28,7 @@ namespace Portfolio.Repositories
                     ImageUrl = "https://insektenliebe.com/wp-content/uploads/2019/01/IMG_8316.jpg",
                     // REVIEW: Consider making this a list of Enums rather than strings. I started an enum class for these tags already,
                     // you can add more tags to this file. 
-                    Tags = new List<string> { "csharp", "asp.net core mvc", "html", "css", "js" },
+                    Tags = new List<Tag> {Tag.CSHARP, Tag.MVC, Tag.HTML, Tag.CSS, Tag.JS},
                     LiveUrl = "www.jgallardo.dev"
                 },
                 new Project
@@ -38,7 +38,7 @@ namespace Portfolio.Repositories
                     Description = "Don't spend money give and get stuff for free. A community classifieds website.",
                     GithubUrl = "https://github.com/Juan-G-04/sharenet-aspnet",
                     LiveUrl = "www.sharenet.col",
-                    Tags = new List<string> { "csharp", "mvc", "asp.net", ".net core 3.0", "html", "css", "js" },
+                    Tags = new List<Tag> {Tag.CSHARP, Tag.MVC, Tag.HTML, Tag.CSS, Tag.JS},
                     Featured = true
                 },
                 new Project
@@ -48,7 +48,7 @@ namespace Portfolio.Repositories
                     Description = "A javascript browser game where you play as a terrastrial isopod.",
                     GithubUrl = "not found",
                     LiveUrl = "www.isogame.com",
-                    Tags = new List<string> { "game", "javascript", "html5" },
+                    Tags = new List<Tag> {Tag.CSHARP, Tag.MVC, Tag.HTML, Tag.CSS, Tag.JS},
                     Featured = false
                 }
             };

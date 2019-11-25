@@ -16,8 +16,7 @@ namespace Portfolio.Models
 		public string Description { get; set; }
 		public string GithubUrl { get; set; }
 		public string LiveUrl { get; set; }
-        // REVIEW: Consider making this a list of enums.
-		public IEnumerable<string> Tags { get; set; }
+		public IEnumerable<Tag> Tags { get; set; }
 		public bool Featured { get; set; }
 		public int ProjectId { get; set; }
 	}
