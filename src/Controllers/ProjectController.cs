@@ -24,12 +24,12 @@ namespace Portfolio.Controllers
         /// <returns></returns>
 		public ViewResult Index()
 		{
-            var projectsListViewModel = new ProjectsListViewModel
-            {
-                Projects = _projectRepository.GetAll
-            };
+			var projectsListViewModel = new ProjectsListViewModel
+			{
+				Projects = _projectRepository.GetAll
+			};
 
-            return View(projectsListViewModel);
+			return View(projectsListViewModel);
 		}
 	}
 }
