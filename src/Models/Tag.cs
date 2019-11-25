@@ -3,7 +3,8 @@
 namespace Portfolio.Models
 {
     /// <summary>
-    /// REVIEW: Add a description of the enum.
+    /// Relevant technologies used in the
+    /// projects displayed on the site.
     /// </summary>
     public enum Tag
     {

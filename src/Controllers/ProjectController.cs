@@ -6,9 +6,9 @@ using Portfolio.ViewModels;
 
 namespace Portfolio.Controllers
 {
-    /// <summary>
-    /// REVIEW: Add a description of the class.
-    /// </summary>
+	/// <summary>
+	/// Project related Actions
+	/// </summary>
 	public class ProjectController : Controller
 	{
 		private readonly IProjectRepository _projectRepository;
@@ -18,10 +18,10 @@ namespace Portfolio.Controllers
 			_projectRepository = projectRepository;
 		}
 
-        /// <summary>
-        /// REVIEW: Add a description of the method.
-        /// </summary>
-        /// <returns></returns>
+		/// <summary>
+		/// REVIEW: Add a description of the method.
+		/// </summary>
+		/// <returns></returns>
 		public ViewResult Index()
 		{
 			var projectsListViewModel = new ProjectsListViewModel

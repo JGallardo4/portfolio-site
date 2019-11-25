@@ -5,7 +5,9 @@ using System.Linq;
 namespace Portfolio.Models
 {
     /// <summary>
-    /// REVIEW: Add a description of the class.
+    /// Represents a project I have built
+	/// to showcase my skills to potential
+	/// employers
     /// </summary>
 	public class Project
 	{
