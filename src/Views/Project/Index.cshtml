@@ -1,5 +1,7 @@
 ﻿@using Portfolio.Models
-@using Microsoft.AspNetCore.Html
+@using System.Linq
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
 @model ProjectsListViewModel
 
 <!-- Home Page. Displays all projects 
@@ -18,7 +20,12 @@
 			<h4><ul>
 				@foreach(var tag in p.Tags)
 				{
-					<li>@tag.ToString("G")</li>
+				<li>@(tag
+							.GetType()
+							.GetMember(tag.ToString())
+							.First()
+							.GetCustomAttribute<DisplayAttribute>()
+							.GetName())</li>
 				}
 			</ul></h4>
 		</div></li>
