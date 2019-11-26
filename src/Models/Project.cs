@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace Portfolio.Models
 {
-    /// <summary>
-    /// Represents a project I have built
+	/// <summary>
+	/// Represents a project I have built
 	/// to showcase my skills to potential
 	/// employers
-    /// </summary>
+	/// </summary>
 	public class Project
 	{
 		public string ImageUrl { get; set; }
