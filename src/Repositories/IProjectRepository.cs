@@ -5,13 +5,13 @@ using Portfolio.Models;
 namespace Portfolio.Repositories
 {
     /// <summary>
-    /// REVIEW: Add a description of the interface.
+    /// Specifies the functionality
+		/// of the container of the list of
+		/// projects I have made.
     /// </summary>
 	public interface IProjectRepository
 	{
 		IEnumerable<Project> GetAll { get; }
-		IEnumerable<Project> Featured { get; }
-		IEnumerable<Project> Others { get; }
 		Project GetProjectById(int ProjectId);
 	}
 }
