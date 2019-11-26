@@ -18,7 +18,10 @@ header {
 	grid-template-columns: 1fr 1fr;
 }
 
-#navbar__links li {
+#navbar__links {
+	display: grid;
+	grid-template-columns: repeat(autofill, 1fr); 
+
 	color: #4A6766;
 	text-transform: uppercase;
 	background: #4A6766;
