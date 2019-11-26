@@ -1,39 +1,45 @@
-﻿@model ProjectsListViewModel
+﻿@using Portfolio.Models
+@using Microsoft.AspNetCore.Html
+@model ProjectsListViewModel
 
 <!-- Home Page. Displays all projects 
 	Shows option to filter projects
 	by selecting tags -->
 
-<h1>All Projects</h1>
+@{
+	void DisplayProject(Project p)
+	{
+		<li><div class="project-card">
+			<h2>@p.Name</h2>
+			<h3>@p.Description</h3>
+			<hr>
+			<h4>@p.GithubUrl</h4>
+			<h4>@p.LiveUrl</h4>
+			<h4><ul>
+				@foreach(var tag in p.Tags)
+				{
+					<li>@tag.ToString("G")</li>
+				}
+			</ul></h4>
+		</div></li>
+	}
+}
 
+<h1>All Projects</h1>
 <h3>Featured Projects</h3>
 <hr>
 <ul id="projects-featured">
-	@foreach (var project in Model.Projects.Where(p => p.Featured))
+	@{foreach (var project in Model.Projects.Where(p => p.Featured))
 	{
-	<li><div class="project-card">
-		<h2>@project.Name</h2>
-		<h3>@project.Description</h3>
-		<hr>
-		<h4>@project.GithubUrl</h4>
-		<h4>@project.LiveUrl</h4>
-	</div></li>
-	}
+		DisplayProject(project);
+	}}
 </ul>
 
 <h3>Other Projects</h3>
 <hr>
 <ul id="projects-others">
-	@foreach (var project in Model.Projects.Where(p => !p.Featured))
+	@{foreach (var project in Model.Projects.Where(p => !p.Featured))
 	{
-	<li>
-        <div class="project-card">
-		    <h2>@project.Name</h2>
-		    <h3>@project.Description</h3>
-		    <hr>
-		    <h4>@project.GithubUrl</h4>
-		    <h4>@project.LiveUrl</h4>
-	    </div>
-    </li>
-	}
+		DisplayProject(project);
+	}}
 </ul>
