@@ -14,10 +14,10 @@
 		<li><div class="project-card">
 			<h2>@p.Name</h2>
 			<h3>@p.Description</h3>
-			<hr>
-			<h4>@p.GithubUrl</h4>
-			<h4>@p.LiveUrl</h4>
-			<h4><ul>
+			<h4><a href=@p.GithubUrl>Github</a></h4>
+			<h4><a href=@p.LiveUrl>Live</a></h4>
+			<h4>Tags:</h4>
+			<ul>
 				@foreach(var tag in p.Tags)
 				{
 				<li>@(tag
@@ -27,7 +27,7 @@
 							.GetCustomAttribute<DisplayAttribute>()
 							.GetName())</li>
 				}
-			</ul></h4>
+			</ul>
 		</div></li>
 	}
 }

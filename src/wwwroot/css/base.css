@@ -1,32 +1,96 @@
-@import url('https://fonts.googleapis.com/css?family=Cousine&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 
-* {
-	font-family: 'Cousine', monospace;
-	border-sizing: border-box;
+/* Color scheme */
+:root {
+	--bg-color: #121C26; /* Blue */
+	--bg-accent-color: #C24545; /* Red */
+	--fg-color: #EECD7B; /* Yellow */
+	--accent-color: #E67649; /* Orange */
+}
+
+body {
+	margin: 0 auto;
+	padding: 10px;
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+
+	display: grid;
+	grid-template-areas:
+		"header"
+		"nav"
+		"content";
 }
 
 header {
+	text-align: center;
+}
+
+banner {
+}
+
+/* Link styles */
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: var(--accent-color);
+	text-decoration:none;
+}
+
+a:active {
+	color: var(--bg-color);
+	text-decoration:none;
+}
+
+header {
+	grid-area: header;
 	display: grid;
 	grid-template-columns: 
-		minmax(min-content, max-content)
+		1fr
 		1fr
 		1fr;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-family: Philosopher, serif;
+	font-size: xx-large;
 }
 
-#projects-list {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+nav {
+	grid-area: nav;
+	font-family: Philosopher, serif;
+	font-size: x-large;
 }
 
-#navbar__links {
+#content {
+	grid-area: content;
 	display: grid;
-	grid-template-columns: repeat(autofill, 1fr); 
+	font-size: large;
+}
 
-	color: #4A6766;
+nav ul {
+	display: flex;
+	padding: 0.5% 10%;
+	text-decoration: none;
 	text-transform: uppercase;
-	background: #4A6766;
 }
 
-#navbar__links li:nth-child(even) {
-	background: #3B383B;
+
+/* For narrow viewports */
+@media (max-width: 499px) {
+	nav ul {
+		flex-direction: column;
+	}
+}
+
+/* For wider viewports */
+@media (min-width: 500px) {
+	nav ul {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }

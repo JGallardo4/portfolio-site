@@ -13,13 +13,12 @@
 	</head>
 	<body>
 		<header>
-			<img id="header__banner__logo"
+			<div><img id="header__banner__logo"
 				src="~/images/temporary-logo.svg"
-				alt="Juan Gallardo's logo">
+				alt="Juan Gallardo's logo"></div>
 
 			<div id="title">
 				<h1>Juan Gallardo's Portfolio</h1>
-				<h2>Full-stack web developer in Edmonton</h2>
 			</div>
 				
 			<div id=quicklinks>
@@ -28,16 +27,15 @@
 			</div>
 		</header>
 
-			<nav id="navbar">
-				<ul id="navbar__links">
-					<li><a href="Projects">Projects</a></li>
-					<li><a href="Resume">Resume</a></li>
-					<li><a href="Contact">Contact</a></li>
-					<li><a href="About">About</a></li>
-				</ul>
-			</nav>
-		
-		@RenderBody()
-
+		<nav id="navbar">
+			<ul id="navbar__links">
+				<li><a href="Projects">Home/Projects</a></li>
+				<li><a href="Resume">Resume</a></li>
+				<li><a href="Contact">Contact</a></li>
+				<li><a href="About">About</a></li>
+			</ul>
+		</nav>
+	
+		<div id="content">@RenderBody()</div>
 	</body>
 </html>
