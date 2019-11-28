@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Portfolio.Models;
 
 namespace Portfolio.Repositories
@@ -12,6 +11,5 @@ namespace Portfolio.Repositories
 	public interface IProjectRepository
 	{
 		IEnumerable<Project> GetAll { get; }
-		Project GetProjectById(int ProjectId);
 	}
 }

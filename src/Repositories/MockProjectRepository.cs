@@ -11,11 +11,11 @@ namespace Portfolio.Repositories
 	/// </summary>
 	public class MockProjectRepository : IProjectRepository
 	{
-		private readonly IEnumerable<Project> Projects;
+		private readonly IEnumerable<Project> _projects;
 
 		public MockProjectRepository()
 		{
-			Projects = new List<Project>
+			_projects = new List<Project>
 			{
 				new Project
 				{
@@ -50,11 +50,7 @@ namespace Portfolio.Repositories
 			};
 		}
 
-		public IEnumerable<Project> GetAll => Projects;
+		public IEnumerable<Project> GetAll => _projects;
 
-		public Project GetProjectById(int projectId)
-		{
-			return Projects.FirstOrDefault(p => p.ProjectId == projectId);
 		}
-	}
 }

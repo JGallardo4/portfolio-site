@@ -1,0 +1,30 @@
+@using System
+@using System.Collections.Generic
+@model ContactViewModel
+
+<!-- Content section of the Contact page.
+	Displays contact info and a simple
+	email form -->
+
+<section id="contact">
+	<div id="contact__details">
+		<h1>Contact Details:</h1>
+		@{DisplayContactDetails();}
+	</div>
+	<div id="email-form">
+		<!-- Create form -->
+	</div>
+</section>
+
+@{
+	// Helper method to display contact info.
+	void DisplayContactDetails()
+	{
+		foreach(KeyValuePair<string, string> kvp in Model.ContactDetails)
+		{
+			<h2>@kvp.Key: @kvp.Value</h2>
+		}
+	}
+}
+
+

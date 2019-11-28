@@ -20,6 +20,7 @@ namespace Portfolio
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddScoped<IProjectRepository, MockProjectRepository>();
+			services.AddScoped<IContactRepository, MockContactRepository>();
 			services.AddControllersWithViews();
     }
 

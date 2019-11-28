@@ -5,7 +5,7 @@ using Portfolio.Models;
 namespace Portfolio.ViewModels
 {
 	/// <summary>
-	/// REVIEW: Add a description of the class.
+	/// REVIEW: Transfers data from the repository to the view.
 	/// </summary>
 	public class ProjectsListViewModel
 	{

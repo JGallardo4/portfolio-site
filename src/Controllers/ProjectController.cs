@@ -1,4 +1,3 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
 
 using Portfolio.Repositories;
@@ -19,7 +18,7 @@ namespace Portfolio.Controllers
 		}
 
 		/// <summary>
-		/// REVIEW: Add a description of the method.
+		/// REVIEW: Returns the projects list page.
 		/// </summary>
 		/// <returns></returns>
 		public ViewResult Index()

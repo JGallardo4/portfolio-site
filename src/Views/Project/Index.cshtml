@@ -11,10 +11,8 @@
 
 <section id="projects">
 	<h1>All Projects</h1>
-
 	<hr>
-
-	<article id="featured">
+	<section id="featured">
 		<h3>Featured Projects</h3>
 		<hr>
 		<ul id="projects-featured">
@@ -23,41 +21,41 @@
 				DisplayProject(project);
 			}}
 		</ul>
-	</article>
+	</section>
 
-	<article id="others">
+	<section id="others">
 		<h3>Other Projects</h3>
 		<hr>
-		<ul id="projects-others">
 			@{foreach (var project in Model.Projects.Where(p => !p.Featured))
 			{
 				DisplayProject(project);
-			}}
-		</ul>
-	</article>
+			}}		
+	</section>
 </section>
 
 @{
 	// Helper method to display project info.
 	void DisplayProject(Project p)
 	{
-		<li><div class="project-card">
+		<article class="project">
 			<h2>@p.Name</h2>
 			<h3>@p.Description</h3>
 			<h4><a href=@p.GithubUrl>Github</a></h4>
 			<h4><a href=@p.LiveUrl>Live</a></h4>
-			<h4>Tags:</h4>
-			<ul>
-				@foreach(var tag in p.Tags)
-				{
-				<li>@(tag
-							.GetType()
-							.GetMember(tag.ToString())
-							.First()
-							.GetCustomAttribute<DisplayAttribute>()
-							.GetName())</li>
-				}
-			</ul>
-		</div></li>
+			<div class="tags">
+				<h4>Tags:</h4>
+				<ul>
+					@foreach(var tag in p.Tags)
+					{
+						<li>@(tag
+								.GetType()
+								.GetMember(tag.ToString())
+								.First()
+								.GetCustomAttribute<DisplayAttribute>()
+								.GetName())</li>
+					}
+				</ul>
+			</div>
+		</article>
 	}
 }
