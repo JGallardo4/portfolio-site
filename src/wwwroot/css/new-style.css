@@ -1,0 +1,138 @@
+/* An approximation of x/sqrt(2).
+ * When used to construcd the diamond,
+ * it keeps all of it in view
+ * with two opposite points touching the
+ * edge of the narrowest dimension
+ * */
+:root {
+	--diamond-size: calc(100vmin / 1.414214);
+	--icon-size: calc(var(--diamond-size) / 8)
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 4fr 4fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 10fr;
+	height: 100vh;
+	width: 100vw;
+	place-items: center;
+}
+
+#logo {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+	width: var(--icon-size);
+}
+
+#logo a {
+	width: inherit;
+}
+
+#svg-logo {
+	width: inherit;
+}
+
+h1 {
+	justify-self: center;
+	font-size: 4vmin;
+	font-family: Philosopher;
+	grid-column: 4 / 5;
+	grid-row: 1 / 2;
+}
+
+#li {
+	grid-column: 6 / 7;
+	grid-row: 1 / 2;
+	width: 2rem;
+}
+
+#gh {
+	grid-column: 5 / 6;
+	grid-row: 1 / 2;
+	width: 2rem;
+}
+
+#nav {
+	width: var(--diamond-size);
+	height: var(--diamond-size);
+	grid-column: 1 / 7;
+	grid-row: 1 / 4;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1vw;
+	transform: rotate(45deg);
+	place-self: center;
+	place-items: stretch;
+}
+
+#nav a {
+	width: 100%;
+	height: 100%;
+	font-family: Philosopher;
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav li {
+	transform: rotate(-45deg);
+}
+
+.icon {
+	font-size: 2em;
+}
+
+/* For smartphones */
+/* wider */
+@media (max-aspect-ratio: 421 / 500) {
+	h1 {
+		grid-column: 3 / 5;
+		grid-row: 1 / 2;
+		font-size: 6vmin;
+	}
+}
+
+/* narrower */
+@media (min-aspect-ratio: 1776 / 1000) {
+	h1 {
+		writing-mode: vertical-lr;
+		grid-column: 6 / 7;
+		grid-row: 2 / 4;
+		font-size: 6vmin;
+	}
+}
+
+/* Colors */
+.icon {
+	color: #C1D9D9;
+}
+
+body {
+	background-color: #17375A;
+}
+
+h1 {
+	color: #C1D9D9;
+}
+
+#nav {
+	color: #17375A;
+}
+
+#nav #projects {
+	background-color: #195259;
+}
+
+#nav #resume {
+	background-color: #C1D9D9;
+}
+
+#nav #about {
+	background-color: #41A698;
+}
+
+#nav #contact {
+	background-color: #33736A;
+}

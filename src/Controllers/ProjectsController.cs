@@ -8,11 +8,11 @@ namespace Portfolio.Controllers
 	/// <summary>
 	/// Project related Actions
 	/// </summary>
-	public class ProjectController : Controller
+	public class ProjectsController : Controller
 	{
 		private readonly IProjectRepository _projectRepository;
 
-		public ProjectController(IProjectRepository projectRepository)
+		public ProjectsController(IProjectRepository projectRepository)
 		{
 			_projectRepository = projectRepository;
 		}

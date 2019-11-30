@@ -1,7 +1,12 @@
-/* The files reset.css and base.css
- * have been concatenated to produce
- * this file
+/* Replace with the content of
+ * all css files before deployment.
  */
 
 @import "reset.css";
-@import "base.css";
+@import "hyperlinks-style.css";
+@import "new-style.css";
+@import "pages/projects-style.css";
+@import "pages/about-style.css";
+@import "pages/contact-style.css";
+@import "pages/resume-style.css"
+

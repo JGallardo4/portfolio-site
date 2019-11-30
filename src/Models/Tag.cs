@@ -22,6 +22,9 @@ namespace Portfolio.Models
         [Display(Name = ".NET Framework")]
         DOTNET_FRAMEWORK,
 
+				[Display(Name = "Entity Framework Core")]
+				EF_CORE,
+
         [Display(Name = "CSS")]
         CSS,
 

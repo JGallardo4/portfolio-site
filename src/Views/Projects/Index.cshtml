@@ -9,29 +9,27 @@
 	Shows option to filter projects
 	by selecting tags -->
 
-<section id="projects">
+<div id="projects">
 	<h1>All Projects</h1>
 	<hr>
+	<h3>Featured Projects</h3>
+	<hr>
 	<section id="featured">
-		<h3>Featured Projects</h3>
-		<hr>
-		<ul id="projects-featured">
 			@{foreach (var project in Model.Projects.Where(p => p.Featured))
 			{
 				DisplayProject(project);
 			}}
-		</ul>
 	</section>
 
+	<h3>Other Projects</h3>
+	<hr>
 	<section id="others">
-		<h3>Other Projects</h3>
-		<hr>
-			@{foreach (var project in Model.Projects.Where(p => !p.Featured))
-			{
-				DisplayProject(project);
-			}}		
+		@{foreach (var project in Model.Projects.Where(p => !p.Featured))
+		{
+			DisplayProject(project);
+		}}		
 	</section>
-</section>
+</div><!-- end of #projects -->
 
 @{
 	// Helper method to display project info.
@@ -40,6 +38,7 @@
 		<article class="project">
 			<h2>@p.Name</h2>
 			<h3>@p.Description</h3>
+			<h3><a href=#>More</a></h3>
 			<h4><a href=@p.GithubUrl>Github</a></h4>
 			<h4><a href=@p.LiveUrl>Live</a></h4>
 			<div class="tags">

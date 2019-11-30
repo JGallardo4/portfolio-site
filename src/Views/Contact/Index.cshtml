@@ -9,22 +9,18 @@
 <section id="contact">
 	<div id="contact__details">
 		<h1>Contact Details:</h1>
-		@{DisplayContactDetails();}
+		<h2><address>Email address: @Model.ContactDetails["Email"]</address></h2>
+		<h2>Phone number: @Model.ContactDetails["Number"]</h2>
 	</div>
-	<div id="email-form">
-		<!-- Create form -->
-	</div>
+
+	<form id="contact-form">
+		<input name="name" class="contact-form__field" type="text" />
+		<br>
+		<input name="email-address" class="contact-form__field" type="text" />
+		<br>
+		<textarea name="message" rows="7" columns="30" class="contact-form__field" type="text">Your message</textarea>
+		<input id="contact-form__submit-button" type="submit" value="Send" />
+	</form>
+
+	</form>
 </section>
-
-@{
-	// Helper method to display contact info.
-	void DisplayContactDetails()
-	{
-		foreach(KeyValuePair<string, string> kvp in Model.ContactDetails)
-		{
-			<h2>@kvp.Key: @kvp.Value</h2>
-		}
-	}
-}
-
-

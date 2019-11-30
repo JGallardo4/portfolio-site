@@ -15,7 +15,7 @@ namespace Portfolio.Repositories
 		public MockContactRepository()
 		{
 			_contactDetails = new Dictionary<string, string>();
-			_contactDetails.Add("Phone number", "780-862-9404");
+			_contactDetails.Add("Number", "780-862-9404");
 			_contactDetails.Add("Email", "juan.gallardo.ab@gmail.com");
 		}
 

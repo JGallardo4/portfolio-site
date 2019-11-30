@@ -13,27 +13,35 @@
 	</head>
 	<body>
 		<header>
-			<div><img id="header__banner__logo"
-				src="~/images/temporary-logo.svg"
-				alt="Juan Gallardo's logo"></div>
+			<div id="logo"><a href="/Home">
+				<img
+					id="svg-logo"
+					src="~/images/temporary-logo.svg"
+					alt="Juan Gallardo's logo">
+			</a></div>
+			<a
+				id="gh"
+				href="github.com/Juan-G-04"
+				class="icon">
+				<i class="fab fa-github-alt"></i>
+			</a>
 
-			<div id="title">
-				<h1>Juan Gallardo's Portfolio</h1>
-			</div>
-				
-			<div id=quicklinks>
-				<a href="https://github.com/Juan-G-04"><i class="fab fa-github-alt"></i></a>
-				<a href="www.linkedin.com/in/jgallardo-dev"><i class="fab fa-linkedin"></i></a>
-			</div>
+			<a
+				id="li"
+				class="icon"
+				href="https://www.linkedin.com/in/jgallardo-dev">
+				<i class="fab fa-linkedin"></i>
+			</a>			
+
+			<h1>Juan Gallardo</h1>
+
+			<ul id="nav" role="navigation">
+				<a id="projects" href="/Projects"><li>Projects</li></a>
+				<a id="resume" href="/Resume"><li>Resume</li></a>
+				<a id="contact" href="/Contact"><li>Contact</li></a>
+				<a id="about" href="/About"><li>About</li></a>
+			</ul>
 		</header>
-
-		<ul id="nav" role="navigation">
-			<a href="Projects"><li>Home/Projects</li></a>
-			<a href="Resume"><li>Resume</li></a>
-			<a href="Contact"><li>Contact</li></a>
-			<a href="About"><li>About</li></a>
-		</ul>
-	
 		<main>@RenderBody()</main>
 	</body>
 </html>
