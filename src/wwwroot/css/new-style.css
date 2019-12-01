@@ -105,34 +105,49 @@ h1 {
 }
 
 /* Colors */
+
+#svg-logo {
+	fill: #9EA3B0;
+}
+
 .icon {
-	color: #C1D9D9;
+	color: #9EA3B0;
 }
 
 body {
-	background-color: #17375A;
+	background: url(/images/bridge-night.jpg);
+	background-size: cover;
 }
 
 h1 {
-	color: #C1D9D9;
+	color: #9EA3B0;
 }
 
-#nav {
+.nav__item {
+	transition: 0.3s;
 	color: #17375A;
 }
 
+.nav__item:link {
+	opacity: 0.9;
+}
+
+.nav__item:hover {
+	opacity: 1.0;
+}
+
 #nav #projects {
-	background-color: #195259;
+	background-color: #074F57;
 }
 
 #nav #resume {
-	background-color: #C1D9D9;
+	background-color: #454573;
 }
 
 #nav #about {
-	background-color: #41A698;
+	background-color: #546A7B;
 }
 
 #nav #contact {
-	background-color: #33736A;
+	background-color: #9EA3B0;
 }

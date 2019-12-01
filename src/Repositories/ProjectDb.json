@@ -1,0 +1,11 @@
+{"projects":[
+	{
+		"name":"Portfolio",
+		"description":"A website to showcase my work to potential employers",
+		"github":"https://github.com/Juan-G-04/portfolio-site",
+		"live":"www.jgallardo.dev",
+		"image":"https://insektenliebe.com/wp-content/uploads/2019/01/IMG_8316.jpg",
+		"tags":[],
+		"featured":true
+	}
+]}
