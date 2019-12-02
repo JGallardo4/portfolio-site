@@ -36,7 +36,6 @@ namespace Portfolio
       app.UseStaticFiles();
       app.UseRouting();
 			
-			// Sets the projects page as the home page
       app.UseEndpoints(endpoints =>
       {
 				endpoints.MapControllerRoute(
