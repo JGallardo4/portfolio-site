@@ -1,3 +1,6 @@
+@import "reset.css";
+@import "hyperlinks.css";
+
 /* An approximation of x/sqrt(2).
  * When used to construcd the diamond,
  * it keeps all of it in view

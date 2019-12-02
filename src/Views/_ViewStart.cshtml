@@ -1,3 +1,18 @@
 @{
-	Layout = "_Layout";
+	var controller = Context
+		.Request
+		.RouteValues["Controller"]
+		.ToString();
+	
+	string layout = "";
+	if (controller != "Home")
+	{
+		layout = "Shared/_Layout.cshtml";
+	}
+	else
+	{
+		layout = null;
+	}
+
+	Layout = layout;
 }

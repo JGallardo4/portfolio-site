@@ -1,7 +1,48 @@
-<!-- 
-	File intentionally empty.
-	The home page displays only
-	the navigation menu common to
-	all pages, which can be found
-	at '/Views/Shared/_Layout.cshtml'
--->
+<!DOCTYPE html>
+<!-- Use Block__Element-Modifier -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			content="width=device-width" />
+		<title>@ViewBag.Title</title>
+		<environment include="Development">
+			<link rel="stylesheet"
+				href="/css/pages/home.css" />
+		</environment>
+		<script src="https://kit.fontawesome.com/df3d0cc377.js"
+			crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div id="logo"><a href="/Home">
+				<img
+					id="svg-logo"
+					src="~/images/temp-logo.svg"
+					alt="Juan Gallardo's logo">
+			</a></div>
+			<a
+				id="gh"
+				href="github.com/Juan-G-04"
+				class="icon">
+				<i class="fab fa-github-alt"></i>
+			</a>
+
+			<a
+				id="li"
+				class="icon"
+				href="https://www.linkedin.com/in/jgallardo-dev">
+				<i class="fab fa-linkedin"></i>
+			</a>			
+
+			<h1>Juan Gallardo</h1>
+
+			<ul id="nav" role="navigation">
+				<a id="projects" href="/Projects" class="nav__item"><li>Projects</li></a>
+				<a id="resume" href="/Resume"class="nav__item"><li>Resume</li></a>
+				<a id="contact" href="/Contact"class="nav__item"><li>Contact</li></a>
+				<a id="about" href="/About"class="nav__item"><li>About</li></a>
+			</ul>
+		</header>
+	</body>
+</html>
