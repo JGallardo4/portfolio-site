@@ -2,12 +2,14 @@
 <!-- Use Block__Element-Modifier -->
 <html>
 	<head>
-		<title>@ViewBag.Title</title>
+		<meta charset="utf-8" />
 		<meta name="viewport"
 			content="width=device-width" />
-		<environment names="Development">
-		<link rel="stylesheet"
-			href="~/css/main-style.css" />
+		<title>@ViewBag.Title</title>
+		<environment include="Development">
+			<link rel="stylesheet"
+				href="~/css/main.css" />
+		</environment>
 		<script src="https://kit.fontawesome.com/df3d0cc377.js"
 			crossorigin="anonymous"></script>
 	</head>
