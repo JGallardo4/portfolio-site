@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Use Block__Element-Modifier -->
+<!-- Use Block__Element--Modifier -->
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -14,23 +14,24 @@
 	</head>
 	<body>
 		<header>
-			<div id="logo"><a href="/Home">
-				<img
-					id="svg-logo"
-					src="~/images/temp-logo.svg"
-					alt="Juan Gallardo's logo">
-			</a></div>
-			<a
-				id="gh"
-				href="github.com/Juan-G-04"
-				class="icon">
+			<div class="logo" id="logo-container">
+				<a href="/Home" class="logo" id="logo-container__link">
+					<img src="~/images/temp-logo.svg"
+						class="logo"
+						id="logo-container__img"						
+						alt="Juan Gallardo's logo">
+				</a>
+			</div><!-- End of logo -->
+
+			<a href="github.com/Juan-G-04"
+				id="github"				
+				class="quicklink">
 				<i class="fab fa-github-alt"></i>
 			</a>
 
-			<a
-				id="li"
-				class="icon"
-				href="https://www.linkedin.com/in/jgallardo-dev">
+			<a href="https://www.linkedin.com/in/jgallardo-dev"
+				id="linkedin"
+				class="quicklink">			
 				<i class="fab fa-linkedin"></i>
 			</a>			
 
