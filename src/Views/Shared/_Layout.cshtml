@@ -7,8 +7,7 @@
 			content="width=device-width" />
 		<title>@ViewBag.Title</title>
 		<environment include="Development">
-			<link rel="stylesheet"
-				href="/css/shared.css" />
+			@RenderSection("Style", required: true)
 		</environment>
 		<script src="https://kit.fontawesome.com/df3d0cc377.js"
 			crossorigin="anonymous"></script>
@@ -35,7 +34,7 @@
 				<i class="fab fa-linkedin"></i>
 			</a>			
 
-			<h1>Juan Gallardo</h1>
+			<h1 id="juan">Juan Gallardo</h1>
 
 			<ul id="nav" role="navigation">
 				<a id="projects" href="/Projects" class="nav__item"><li>Projects</li></a>
@@ -44,6 +43,8 @@
 				<a id="about" href="/About"class="nav__item"><li>About</li></a>
 			</ul>
 		</header>
-		<main>@RenderBody()</main>
+		<main>
+			@RenderBody()
+		</main>
 	</body>
 </html>

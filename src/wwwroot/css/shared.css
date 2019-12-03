@@ -1,3 +1,6 @@
+@import "reset.css";
+@import "hyperlinks.css";
+
 @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
@@ -10,49 +13,59 @@
 	--accent-color: #E67649; /* Orange */
 }
 
+/* Layout */
 body {
-	margin: 0 auto;
 	padding: 10px;
-	color: var(--fg-color);
-	background-color: var(--bg-color);
-}
-
-#nav a {
-	text-transform: uppercase;
-	text-decoration: none;
-	color: var(--bg-color);
-	border: solid var(--bg-accent-color);
-	background-color: var(--bg-accent-color);
-}
-
-#nav a:hover {
-	color: var(--fg-color);
-	background-color: var(--bg-color);
-}
-
-/* Component styles */
-header {
-	text-align: center;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	font-family: Philosopher, serif;
-	font-size: xx-large;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	place-items: stretch;
 }
 
-#nav {
-	font-family: Philosopher, serif;
-	font-size: x-large;
-	text-align: center;
-	display: grid;
-}
+	header {
+		grid-column: 1 / 1;
+		grid-row: 1 / 2;
+		display: grid;
+		grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+		grid-template-rows: 1fr auto;
+		height: 100%;
+		width: 100%;
+		place-items: center;
+	}
+		#logo {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			padding: 1vmin;
+			width: 4vmax;
+		}
+		#juan {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+		#nav {
+			grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		display: grid;
+		}
+		#gh {
+			grid-column: 4 / 5;
+			grid-row: 2 / 3;
+		}
+		#li {
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
+		}		
 
-#content {
-	display: grid;
-	font-size: large;
-}
+	main {
+		display: grid;
+		padding: 1vmax 0 0 0;
+	}
+
+
+
+
+
+
 
 /* For narrow viewports */
 @media (max-width: 700px) {
@@ -66,4 +79,49 @@ header {
 	#nav {
 		grid-template-columns: repeat(4, minmax(150px, 1fr));
 	}
+}
+
+/* Fonts */
+
+main {
+	font-size: large;
+}
+
+body {
+	font-family: Philosopher, serif;
+	font-size: xx-large;
+	background-color: var(--bg-color);
+	text-align: center;
+	color: var(--fg-color);
+}
+
+#nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--bg-color);
+	border: solid var(--bg-accent-color);
+	background-color: var(--bg-accent-color);
+}
+
+nav {
+font-family: Philosopher, serif;
+	font-size: x-large;
+	text-align: center;
+}
+
+/* Colors */
+
+#nav a:hover {
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+}
+
+/* Logo sizing */
+
+#svg-logo {
+	width: inherit;
+}
+
+#logo a {
+	width: inherit;
 }
