@@ -1,6 +1,9 @@
 @import "../base/_reset.css";
 @import "../base/_colors.css";
+@import "../base/_hyperlinks.css";
+@import "../base/_fonts.css";
 
+/* Layout */
 /* An approximation of x/sqrt(2).
  * When used to construcd the diamond,
  * it keeps all of it in view
@@ -12,8 +15,6 @@
 }
 
 body {
-	background: url(/images/bridge-night.jpg);
-	background-size: cover;
 	margin: 0;
 	padding: 0;
 }
@@ -30,15 +31,18 @@ header {
 }
 
 #logo-container {
+	place-self: stretch;
+	height: 100%;
+	width: 100%;
 	grid-column: 1 / 3;
 	grid-row: 1 / 3;
 	margin: 0;
 	padding: 0;
+	display:grid;
+	place-items: center;
 }
 
 #juan {
-	justify-self: center;
-	font-family: Philosopher;
 	margin: 0;
 	padding: 0;
 }
@@ -73,8 +77,6 @@ header {
 #nav a {
 	width: 100%;
 	height: 100%;
-	font-family: Philosopher;
-	font-size: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -97,7 +99,7 @@ header {
 #juan {
 	writing-mode: horizontal-lr;
 	grid-column: 4 / 5;
-	grid-row: 1 / 2;
+	grid-row: 1 / 3;
 	font-size: 4vmin;
 }
 
@@ -105,7 +107,7 @@ header {
 	/* Span top */
 	#juan {
 		grid-column: 3 / 5;
-		grid-row: 1 / 2;
+		grid-row: 1 / 3;
 		font-size: 6vmin;
 	}
 }
@@ -121,17 +123,33 @@ and (max-aspect-ratio: 25 / 10) {
 	}
 }
 
-/* Nav animation */
-.nav__item {
+/* Animations */
+.nav__item, .quicklink, #logo-container {
 	transition: 0.3s;
 }
 
 .nav__item:link {
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 .nav__item:hover {
 	opacity: 1.0;
+}
+
+.quicklink:link {
+	color: var(--gray);
+}
+
+.quicklink:hover {
+	color: var(--blue);
+}
+
+#logo-container:link {
+	background-color: var(--gray);
+}
+
+#logo-container:hover {
+	background-color: var(--blue);
 }
 
 /* Header colors */
@@ -139,12 +157,9 @@ and (max-aspect-ratio: 25 / 10) {
 	color: var(--gray);
 }
 
-#svg-logo {
-	fill: var(--gray);
-}
-
-.quicklink {
-	color: var(--gray);
+#logo-container {
+	background-color: var(--gray);
+	border-bottom-right-radius: 15px;
 }
 
 /* Nav colors */
@@ -166,4 +181,21 @@ and (max-aspect-ratio: 25 / 10) {
 #contact {
 	background-color: var(--gray);
 	color: var(--blue);
+}
+
+/* Fonts */
+#juan {
+	justify-self: center;
+	font-family: Philosopher;
+}
+
+#nav {
+	font-family: Philosopher;
+	font-size: 2rem;
+}
+
+/* Background */
+body {
+	background: url(/images/bridge-night.jpg);
+	background-size: cover;
 }
