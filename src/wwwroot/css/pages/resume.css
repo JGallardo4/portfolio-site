@@ -1,0 +1,32 @@
+#resume {
+	background-color: var(--blue);
+	color: var(--gray);
+}
+
+#resume-container {
+	padding: 2vmax;
+	margin: 2vmax;
+	width: 90vw;
+	height: 116.5vw;
+	background-color: var(--gray);
+	color: black;
+	border-radius: 15px;
+	font-size: large;
+	line-height: 2em;
+}
+
+#main-separator {
+	background-color: var(--blue);
+	height: 1em;
+	width: calc(90vw / 2);
+}
+
+#skills, #contact-details {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#skills ul {
+	list-style: disc inside;
+}

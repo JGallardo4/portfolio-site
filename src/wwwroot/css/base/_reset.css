@@ -6,12 +6,6 @@
  * Modified for my own needs
 */
 
-*, *:before, *:after {
-	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

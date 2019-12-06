@@ -7,6 +7,8 @@
 @section Style {
 	<link rel="stylesheet"
 		href="/css/shared.css" />
+	<link rel="stylesheet"
+		href="/css/pages/projects.css" />
 }
 
 <!-- Content section of the Home/Projects page.
@@ -14,27 +16,29 @@
 	Shows option to filter projects
 	by selecting tags -->
 
-<div id="projects">
-	<h1>All Projects</h1>
-	<hr>
-	<h3>Featured Projects</h3>
-	<hr>
+	<menu id="download-menu">
+		<h1>All Projects</h1>
+	</menu>
+
 	<section id="featured">
-			@{foreach (var project in Model.Projects.Where(p => p.Featured))
-			{
-				DisplayProject(project);
-			}}
+		<h3 class="section-title">Featured Projects</h3>
+		<section class="project-grid">
+		@{foreach (var project in Model.Projects.Where(p => p.Featured))
+		{
+			DisplayProject(project);
+		}}
+		</section>
 	</section>
 
-	<h3>Other Projects</h3>
-	<hr>
 	<section id="others">
+		<h3 class="section-title">Other Projects</h3>
+		<section class="project-grid">
 		@{foreach (var project in Model.Projects.Where(p => !p.Featured))
 		{
 			DisplayProject(project);
 		}}		
+		</section>
 	</section>
-</div><!-- end of #projects -->
 
 @{
 	// Helper method to display project info.
