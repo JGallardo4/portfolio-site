@@ -35,6 +35,18 @@ namespace Portfolio.Models
         JS,
 
         [Display(Name = "Python")]
-        PYTHON
+        PYTHON,
+
+				[Display(Name = "Agile Development")]
+				AGILE,
+
+				[Display(Name = "Git Version Control")]
+				GIT,
+
+				[Display(Name = "Test Driven Development")]
+				TDD,
+
+				[Display(Name = "Responsive Web Design")]
+				RESPONSIVE
     }
 }
