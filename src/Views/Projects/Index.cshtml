@@ -23,7 +23,7 @@ by selecting tags -->
 	<section class="project-grid">
 		@foreach (var project in Model.Projects.Where(p => p.Featured))
 		{
-			<partial name="_ProjectCard.cshtml" model="project" />
+			<partial name="_ProjectCard" model="project" />
 		}
 	</section>
 </section>
@@ -33,7 +33,7 @@ by selecting tags -->
 	<section class="project-grid">
 		@foreach (var project in Model.Projects.Where(p => !p.Featured))
 		{
-			<partial name="_ProjectCard.cshtml" model="project" />
+			<partial name="_ProjectCard" model='project' />
 		}	
 	</section>
 </section>
