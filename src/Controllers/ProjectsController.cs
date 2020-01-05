@@ -18,7 +18,7 @@ namespace Portfolio.Controllers
 		}
 
 		/// <summary>
-		/// REVIEW: Returns the projects list page.
+		/// Returns the projects list page.
 		/// </summary>
 		/// <returns></returns>
 		public ViewResult Index()

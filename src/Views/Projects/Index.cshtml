@@ -1,7 +1,5 @@
-﻿@using Portfolio.Models
-@using System.Linq
-@using System.ComponentModel.DataAnnotations
-@using System.Reflection
+﻿@using System.Linq
+
 @model ProjectsListViewModel
 
 @section Style {
@@ -12,58 +10,30 @@
 }
 
 <!-- Content section of the Home/Projects page.
-	Displays all projects.
-	Shows option to filter projects
-	by selecting tags -->
+Displays all projects.
+Shows option to filter projects
+by selecting tags -->
 
-	<menu id="download-menu">
-		<h1>All Projects</h1>
-	</menu>
+<menu id="download-menu">
+	<h1>All Projects</h1>
+</menu>
 
-	<section id="featured">
-		<h3 class="section-title">Featured Projects</h3>
-		<section class="project-grid">
-		@{foreach (var project in Model.Projects.Where(p => p.Featured))
+<section id="featured">
+	<h3 class="section-title">Featured Projects</h3>
+	<section class="project-grid">
+		@foreach (var project in Model.Projects.Where(p => p.Featured))
 		{
-			DisplayProject(project);
-		}}
-		</section>
+			<partial name="_ProjectCard.cshtml" model="project" />
+		}
 	</section>
+</section>
 
-	<section id="others">
-		<h3 class="section-title">Other Projects</h3>
-		<section class="project-grid">
-		@{foreach (var project in Model.Projects.Where(p => !p.Featured))
+<section id="others">
+	<h3 class="section-title">Other Projects</h3>
+	<section class="project-grid">
+		@foreach (var project in Model.Projects.Where(p => !p.Featured))
 		{
-			DisplayProject(project);
-		}}		
-		</section>
+			<partial name="_ProjectCard.cshtml" model="project" />
+		}	
 	</section>
-
-@{
-	// Helper method to display project info.
-	void DisplayProject(Project p)
-	{
-		<article class="project">
-			<h2>@p.Name</h2>
-			<h3>@p.Description</h3>
-			<h3><a href=#>More</a></h3>
-			<h4><a href=@p.GithubUrl>Github</a></h4>
-			<h4><a href=@p.LiveUrl>Live</a></h4>
-			<div class="tags">
-				<h4>Tags:</h4>
-				<ul>
-					@foreach(var tag in p.Tags)
-					{
-						<li>@(tag
-								.GetType()
-								.GetMember(tag.ToString())
-								.First()
-								.GetCustomAttribute<DisplayAttribute>()
-								.GetName())</li>
-					}
-				</ul>
-			</div>
-		</article>
-	}
-}
+</section>

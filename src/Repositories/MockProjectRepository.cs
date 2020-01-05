@@ -51,6 +51,5 @@ namespace Portfolio.Repositories
 		}
 
 		public IEnumerable<Project> GetAll => _projects;
-
 		}
 }
