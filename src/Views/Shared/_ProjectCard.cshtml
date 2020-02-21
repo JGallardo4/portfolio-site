@@ -1,29 +1,13 @@
 @using System.ComponentModel.DataAnnotations
 @using System.Reflection
 
-@model Portfolio.Models.Project
+@model Portfolio.Models.Projects.Project
 
 <!-- Partial view to display project info. -->
 <article class="project">
 	<h2>@Model.Name</h2>
 	<h3>@Model.Description</h3>
 	<h3><a href=#>More</a></h3>
-	<h4><a href=@Model.GithubUrl>Github</a></h4>
+	<h4><a href=@Model.SourceCodeUrl>Source code</a></h4>
 	<h4><a href=@Model.LiveUrl>Live</a></h4>
-	<div class="tags">
-		<h4>Tags:</h4>
-		<ul>
-			@foreach(var tag in Model.Tags)
-			{
-				<li>
-					@(tag
-					.GetType()
-					.GetMember(tag.ToString())
-					.First()
-					.GetCustomAttribute<DisplayAttribute>()
-					.GetName())
-				</li>
-			}
-		</ul>
-	</div>
 </article>

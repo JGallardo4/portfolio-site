@@ -1,15 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
-using Portfolio.Models;
-using Portfolio.Repositories;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using Portfolio.Data;
 
 namespace Portfolio
 {
@@ -19,8 +15,15 @@ namespace Portfolio
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddScoped<IProjectRepository, MockProjectRepository>();
-			services.AddScoped<IContactRepository, MockContactRepository>();
+			services.AddDbContextPool<AppDbContext>(x => x
+        .UseMySql("Server=localhost;Database=Portfolio;Uid=portfolio;Pwd=4444;",
+          mySqlOptions => 
+          {
+            mySqlOptions
+              .ServerVersion(new Version(10, 4, 11), ServerType.MariaDb);
+          })
+      );
+			
 			services.AddControllersWithViews();
     }
 

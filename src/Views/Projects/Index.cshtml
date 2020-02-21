@@ -1,6 +1,7 @@
 ﻿@using System.Linq
+@using Portfolio.Models.Projects
 
-@model ProjectsListViewModel
+@model IEnumerable<Project>;
 
 @section Style {
 	<link rel="stylesheet"
@@ -21,7 +22,7 @@ by selecting tags -->
 <section id="featured">
 	<h3 class="section-title">Featured Projects</h3>
 	<section class="project-grid">
-		@foreach (var project in Model.Projects.Where(p => p.Featured))
+		@foreach (var project in Model.Where(p => p.Featured))
 		{
 			<partial name="_ProjectCard" model="project" />
 		}
@@ -31,7 +32,7 @@ by selecting tags -->
 <section id="others">
 	<h3 class="section-title">Other Projects</h3>
 	<section class="project-grid">
-		@foreach (var project in Model.Projects.Where(p => !p.Featured))
+		@foreach (var project in Model.Where(p => !p.Featured))
 		{
 			<partial name="_ProjectCard" model='project' />
 		}	

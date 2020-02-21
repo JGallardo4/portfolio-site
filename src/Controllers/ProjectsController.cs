@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
-using Portfolio.Repositories;
-using Portfolio.ViewModels;
+using Portfolio.Data;
 
 namespace Portfolio.Controllers
 {
@@ -10,11 +8,11 @@ namespace Portfolio.Controllers
 	/// </summary>
 	public class ProjectsController : Controller
 	{
-		private readonly IProjectRepository _projectRepository;
+		private readonly AppDbContext _appDbContext;
 
-		public ProjectsController(IProjectRepository projectRepository)
+		public ProjectsController(AppDbContext appDbContext)
 		{
-			_projectRepository = projectRepository;
+			_appDbContext = appDbContext;
 		}
 
 		/// <summary>
@@ -23,12 +21,7 @@ namespace Portfolio.Controllers
 		/// <returns></returns>
 		public ViewResult Index()
 		{
-			var projectsListViewModel = new ProjectsListViewModel
-			{
-				Projects = _projectRepository.GetAll
-			};
-
-			return View(projectsListViewModel);
+			return View(_appDbContext.Projects);
 		}
 	}
 }

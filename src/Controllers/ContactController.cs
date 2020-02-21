@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.Repositories;
 using Portfolio.ViewModels;
 
 namespace Portfolio.Controllers
@@ -9,11 +8,9 @@ namespace Portfolio.Controllers
 		/// </summary>
     public class ContactController : Controller
     {
-			private readonly IContactRepository _contactRepository;
       
-			public ContactController(IContactRepository contactRepository)
+			public ContactController()
 			{
-				_contactRepository = contactRepository;
 			}
 
 			/// <summary>
@@ -24,7 +21,6 @@ namespace Portfolio.Controllers
 			{
 				var contactViewModel = new ContactViewModel
 				{
-					ContactDetails = _contactRepository.ContactDetails
 				};
 
 				return View(contactViewModel);
