@@ -1,25 +1,21 @@
 <!DOCTYPE html>
+<!-- Use Block__Element--Modifier -->
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport"	content="width=device-width" />
-
+		<meta name="viewport"
+			content="width=device-width" />
 		<title>@ViewBag.Title</title>
-
 		<environment include="Development">
 			@RenderSection("Style", required: true)
 		</environment>
-		
 		<link rel="icon" type="image/svg+xml" href="~/images/favicon.svg">
-		
-		<script 
-		src="https://kit.fontawesome.com/df3d0cc377.js"
-		crossorigin="anonymous">
-		</script>
+		<script src="https://kit.fontawesome.com/df3d0cc377.js"
+			crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header id="page-header">
-			<a asp-controller="Home" asp-action="Index" class="logo" id="logo-container">
+			<a href="/Home" class="logo" id="logo-container">
 				<div class="logo">
 					<img src="~/images/temp-logo.svg"
 						class="logo"
@@ -27,7 +23,6 @@
 						alt="Juan Gallardo's logo" />
 				</div>
 			</a><!-- End of logo -->
-
 			<a href="github.com/Juan-G-04"
 				id="github"				
 				class="quicklink">
