@@ -5,7 +5,7 @@
 
 @section Style {
 	<link rel="stylesheet"
-		href="/css/shared.css" />
+		href="/css/_shared.css" />
 	<link rel="stylesheet"
 		href="/css/pages/projects.css" />
 }
@@ -15,26 +15,14 @@ Displays all projects.
 Shows option to filter projects
 by selecting tags -->
 
-<div class="page-title">
-	<h1>All Projects</h1>
-</div>
+<section class="project-grid">
+	@foreach (var project in Model.Where(p => p.Featured))
+	{
+		<partial name="_ProjectCard" model="project" />
+	}
 
-<section id="featured">
-	<h3 class="section-title">Featured Projects</h3>
-	<section class="project-grid">
-		@foreach (var project in Model.Where(p => p.Featured))
-		{
-			<partial name="_ProjectCard" model="project" />
-		}
-	</section>
-</section>
-
-<section id="others">
-	<h3 class="section-title">Other Projects</h3>
-	<section class="project-grid">
-		@foreach (var project in Model.Where(p => !p.Featured))
-		{
-			<partial name="_ProjectCard" model='project' />
-		}	
-	</section>
+	@foreach (var project in Model.Where(p => !p.Featured))
+	{
+		<partial name="_ProjectCard" model='project' />
+	}
 </section>

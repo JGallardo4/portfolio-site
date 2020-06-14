@@ -1,0 +1,24 @@
+@import "base/_reset.css";
+@import "base/_colors.css";
+@import "base/_hyperlinks.css";
+@import "base/_fonts.css";
+@import "base/_header.css";
+
+body {
+	min-height: 100vh;
+	background: var(--bg);
+	color: white;
+}
+
+#logo #arrowhead {
+	fill: white;
+}
+
+#logo #initial {
+	fill: var(--bg);
+}
+
+#site-main {
+	padding: 1em;
+}
+

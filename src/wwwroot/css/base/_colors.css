@@ -3,6 +3,7 @@
  */
  
 :root {
-    --gray: #9EA3B0;
-    --blue: #17375A;
+	--bg: #20242D;
+	--highlight: #F15978;
+	--accent1: #013d65;
 }

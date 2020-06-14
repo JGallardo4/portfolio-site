@@ -1,46 +1,14 @@
-/* Layout */
-	main {
-		width: 90vw;
-		
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 4vmax 1fr 1fr;
-		place-items: stretch;
-	}
+#projects {
+	cursor: pointer;
+	background: var(--highlight);
+	color: var(--bg);
+	border-radius: 1em;
+}
 
-	.project-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-		grid-gap: 2vmax;
-		align-items: center;
-	}
+.project {
+	background-color: var(--accent1);
+}
 
-	.page-title {
-		grid-row: 1;
-
-		display: grid;
-		place-items: center;
-	}
-
-	#featured {
-		grid-column: 1 / 2;
-		grid-row: 2 / 3;
-	}
-
-	#others {
-		grid-column: 1 / 2;
-		grid-row: 3 / 4;
-	}
-
-/* Style */
-	.page-title, .section-title {
-		color: white;
-		font-size: xx-large;
-		font-family: Philosopher;
-	}
-
-	.project {
-		background: white;
-		padding: 20px;
-		border-radius: 15px;
-	}
+.project-name {
+	text-align: center;
+}

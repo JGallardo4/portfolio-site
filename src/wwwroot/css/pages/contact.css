@@ -1,0 +1,6 @@
+#contact {
+	cursor: pointer;
+	background: var(--highlight);
+	color: var(--bg);
+	border-radius: 1em;
+}

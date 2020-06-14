@@ -1,27 +1,17 @@
-@model ContactViewModel
-
 @section Style {
 	<link rel="stylesheet"
-		href="/css/shared.css" />
+		href="/css/_shared.css" />
+	<link rel="stylesheet"
+		href="/css/pages/contact.css" />
 }
 
 <!-- Content section of the Contact page.
 	Displays contact info and a simple
 	email form -->
 
-<section id="contact">
-	<div id="contact__details">
-		<h1>Contact Details:</h1>
-		<h2><address>Email address: @Model.ContactDetails["Email"]</address></h2>
-		<h2>Phone number: @Model.ContactDetails["Number"]</h2>
-	</div>
-
-	<form id="contact-form">
-		<input name="name" class="contact-form__field" type="text" />
-		<br>
-		<input name="email-address" class="contact-form__field" type="text" />
-		<br>
-		<textarea name="message" rows="7" columns="30" class="contact-form__field" type="text">Your message</textarea>
-		<input id="contact-form__submit-button" type="submit" value="Send" />
-	</form>
+<section id="contact__details">
+	<p>Email: </p>
+	<a target="_blank" href="https://mailhide.io/e/IXuXm" class="link">
+		j...@@gmail.com <i class="fa fa-external-link" aria-hidden="true"></i> 
+	</a> 
 </section>
