@@ -1,25 +1,22 @@
-#site-header {
-	font-weight: bold;
-	font-family: "Open Sans";
+#site-header {	
 	padding: 1em;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	grid-template-rows: auto auto;
-	gap: 1em;
 }
 
 #site-title {
 	grid-column: 2;
 	grid-row: 1;
-	padding: 0.5em;
-	place-self: center;
+	padding-left: 0.5em;
+	align-self: center;
 }
 
-#nav {
+#nav {	
 	grid-column: 3;
 	grid-row: 1;
 	display: flex;
-	gap: 1em;
+	gap: 10px;
 	align-self: flex-start;
 }
 
@@ -39,20 +36,20 @@
 }
 
 #logo, #logo-container {
-	height: 7vw;
-	min-height: 5em;
-	min-width: 5em;
-	width: 7vw;
+	height: 90px;
+	width: 90px;
 }
 
 .toggle, .toggle-label { display: none; } /* Hide checkbox */
 
-@media (max-width: 792px) {
+/* Create collapsible menu for mobile */
+/* Active for widths up to the selected length */
+@media (max-width: 850px) {
 	#nav {
 		flex-direction: column;
+		padding-top: 1em;
 	}	
 	
-	/* Hamburger menu */
 	.toggle-label { display: block; }
 	
 	.toggle + .toggle-label::before {

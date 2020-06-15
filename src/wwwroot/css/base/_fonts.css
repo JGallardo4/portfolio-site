@@ -1,6 +1,44 @@
 /* Open Sans */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+#site-header {
+	font-family: "Open Sans";
+	font-weight: 800;	
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+#nav, .toggle-label {
+	font-size: 18px;
+}
+
 #site-main {
 	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 1.6;
+	font-size: 21px;
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 25px; }
+p { font-size: 21px; }
+
+/* Adjust font sizes for mobile */
+/* Active for widths up to the selected length */
+@media (max-width: 792px) { 
+	#nav, .toggle-label {
+		font-size: 16px;
+	}
+
+	#site-title {
+		font-size: 18px;
+	}
+
+	#site-main, #nav, .toggle-label {
+		font-size: 16px;
+	}
+	
+	h1 {font-size: 21px;}
+	h2 {font-size: 18px;}
+	p {font-size: 16px;}
 }
