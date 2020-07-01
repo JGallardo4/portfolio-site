@@ -31,14 +31,8 @@
 	padding: 0.5em;
 }
 
-.nav-item:hover, .toggle-label:hover {
+.nav-item:hover, .external:hover, .toggle-label:hover {
 	cursor: pointer;
-	background: var(--highlight);
-	color: var(--bg);
-	border-radius: 1em;
-}
-
-.external:hover {
 	color: var(--highlight);
 }
 
