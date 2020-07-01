@@ -13,6 +13,13 @@
 	justify-self: center;
 	width: max-content;
 	text-align: center;
-	border-bottom: 3px solid var(--highlight);
-	margin-bottom: 0.5em;
+}
+
+.project-name hr {
+	background-color: var(--highlight);
+	height: 3px;
+	border: none;
+	margin: auto;
+	margin-bottom: 1em;
+	width: 75%;	
 }
