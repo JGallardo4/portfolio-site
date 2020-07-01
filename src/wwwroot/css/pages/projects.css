@@ -1,14 +1,18 @@
 #projects {
-	cursor: pointer;
-	background: var(--highlight);
-	color: var(--bg);
-	border-radius: 1em;
+	background-color: var(--selectedBg);
+	color: var(--selectedColor);
+	text-transform: uppercase;
 }
 
 .project {
-	background-color: var(--accent1);
+	display: grid;
+	padding: 0.5em;
 }
 
 .project-name {
+	justify-self: center;
+	width: max-content;
 	text-align: center;
+	border-bottom: 3px solid var(--highlight);
+	margin-bottom: 0.5em;
 }
