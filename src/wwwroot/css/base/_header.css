@@ -1,3 +1,9 @@
+/* Current page navbar option style */
+	:root {
+		--selectedBg: #20242D;
+		--selectedColor: #F15978;
+	}
+
 #site-header {	
 	padding: 1em;
 	display: grid;
@@ -74,4 +80,3 @@
 	}	
 	/* End hamburger menu */
 }
-
