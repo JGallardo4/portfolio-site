@@ -8,13 +8,14 @@
 		href="/css/_shared.css" />
 	<link rel="stylesheet"
 		href="/css/pages/projects.css" />
+	<link rel="stylesheet"
+		href="/css/base/_imageModal.css" />
 }
 
 <!-- Content section of the Home/Projects page.
 Displays all projects.
 Shows option to filter projects
 by selecting tags -->
-
 <section class="project-grid">
 	@foreach (var project in Model.Where(p => p.Featured))
 	{
@@ -26,3 +27,14 @@ by selecting tags -->
 		<partial name="_ProjectCard" model='project' />
 	}
 </section>
+
+<!-- Image modal (Click to expand) -->
+	<div id="imageModal">
+		<div id="modal-close">&times;</div>
+
+		<img
+		id="modal-content"
+		alt="Project home page">	
+	</div>
+
+<script src="js/imageModal.js"></script>
